@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-image: url('xO.jpg'); /* Update path if needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 5px;
+    background-color:gray; /* or any other background */
+    opacity: 0.5;
+  }
+  
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border: 2px solid #333;
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .cell.win {
+    background-color: #8bc34a;
+    animation: flash 0.5s alternate infinite;
+  }
+  
+  @keyframes flash {
+    from {
+      background-color: #8bc34a;
+    }
+    to {
+      background-color: #66bb6a;
+    }
+  }
+  
+  .status {
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buttons button:hover {
+    background-color: #ddd;
+    box-shadow: blue;
+  }
+  
